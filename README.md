@@ -68,10 +68,10 @@ The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 First I, SSH into the Jump-Box-Provisioner (ssh azure@20.124.135.232)
 Start/Attached to the ansible docker (sudo docker start relaxed_roentgen )/(sudo docker attach relaxed_roentgen)
-Went to /etc/ansible/roles directory and created the ELK playbook (Elk_Playbook.yml)
-Ran the Elk_Playbook.yml in that same directory (ansible-playbook Elk_Playbook.yml)
-Lastly, I SSH into the ELK-VM to verify the server is up and running.
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+Sent to /etc/ansible/roles directory and created the ELK playbook (Elk_Playbook.yml)
+Run the Elk_Playbook.yml in the same directory (ansible-playbook Elk_Playbook.yml)
+Then you ssh  into the ELK-VM to verify the server is running.
+The screenshot shows the results of running `docker ps` after successfully configuring the ELK instance.
 
 ![docker ps output](https://github.com/upshawjames25/Elk-Project1/blob/main/Diagrams/Screenshot%202021-12-23%20215922.png)
 ELK-VM Docker PS
@@ -97,7 +97,7 @@ SSH into the control node and follow the steps below:
 
  Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? filebeat-playbook.yml Where do you copy it? /etc/ansible/roles
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?http: //20.124.135.232:5601/
+- _Which file do you update to make Ansible run the playbook on a specific machine? /etc/ansible/hosts file How do I specify which machine to install the ELK server on versus which to install Filebeat on? You have to separate them in different groups /etc/ansible/hosts file
+- _Which URL do you navigate to in order to check that the ELK server is running? http://20.124.135.232:5601/
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
